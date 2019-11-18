@@ -13,7 +13,7 @@ namespace PkgExeExtract
     {
         static void Main(string[] args)
         {
-            string ExeFileName = @"D:\TelpoFaceServer\TelpoFaceServer.exe";
+            string ExeFileName = args[0];
             System.Text.RegularExpressions.Regex reg = new System.Text.RegularExpressions.Regex(@"[^']*'([\d]+)[ ]*'[^']*");
             using (StreamReader br = new StreamReader(ExeFileName, Encoding.ASCII, false))
             {
